@@ -281,7 +281,7 @@ f"""<div class="page-head"><div class="wrap"><p class="kicker">Delivery day</p><
 
 <h2>What you need</h2>
 <ul class="ticks">
-<li>A forklift rated above your crate's weight at a 24-inch load center (5,000 lb or more covers every size), with forks 42 inches or longer.</li>
+<li>A forklift rated above your crate's weight at a 24-inch load center (see the <a href="/roof#shipping">crate weights</a>), with forks 42 inches or longer.</li>
 <li>Blocking that holds at least half the crate's weight at trailer-floor height, 48 to 52 inches for a standard trailer: a heavy-duty sawhorse or stand, or 8 to 9 pallets stacked flat. Needed only if there's no liftgate.</li>
 <li>A helper, shims, a tape measure, and firm, level ground: your crate's length plus 17 feet clear behind the trailer.</li></ul>
 
