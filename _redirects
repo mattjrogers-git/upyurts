@@ -1,0 +1,5 @@
+/features-2 /features 301
+/shop /roof 301
+/product-page/metal-yurt-roof /roof 301
+/product-page/* /roof 301
+/blank /  301
