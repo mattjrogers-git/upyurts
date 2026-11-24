@@ -233,7 +233,7 @@ f"""<div class="page-head"><div class="wrap"><p class="kicker">Sizes &amp; price
 <h2>Prices</h2>
 <p class="note"><b>Freight is included in every price.</b> Delivery east of the Mississippi River costs <b>$1,000 more</b> because freight there is higher, so both prices are shown.</p>
 {size_table()}
-<p>Hawaii, Alaska and Canada: <a href="mailto:{EMAIL}">contact us</a> for a shipping quote before ordering. Prices exclude sales tax, which applies where required, including roofs picked up in New York.</p>
+<p>Hawaii, Alaska and Canada pay the west price: we deliver to your chosen logistics company in the lower 48, and final delivery from there is at your expense. Prices exclude sales tax, which applies where required, including roofs picked up in New York.</p>
 </div>
 <div><div class="video-box"><video controls muted playsinline preload="none" poster="/img/roof-finished.jpg"><source src="/media/roof-drone-1.mp4" type="video/mp4"></video></div>
 <h3 style="margin-top:24px">Every roof includes</h3>
@@ -258,7 +258,7 @@ f"""<div class="page-head"><div class="wrap"><p class="kicker">Sizes &amp; price
 
 <section id="shipping"><div class="wrap">
 <h2>Shipping, crate sizes and unloading</h2>
-<p>Your roof arrives in one sturdy wooden crate on an LTL freight truck. Freight is included west of the Mississippi; east of the Mississippi it's $1,000 extra. Some remote locations are excluded, and Hawaii, Alaska and Canada are quoted separately. You're responsible for unloading, and we're glad to help you plan it.</p>
+<p>Your roof arrives in one sturdy wooden crate on an LTL freight truck. Freight is included west of the Mississippi; east of the Mississippi it's $1,000 extra. Some remote locations are excluded. Hawaii, Alaska and Canada pay the west price for delivery to your chosen logistics company in the lower 48; final delivery from there is at your expense. You're responsible for unloading, and we're glad to help you plan it.</p>
 {size_table(prices=False, crate=True)}
 <p>Weights include about 200 lb of margin, so plan your equipment for the weight shown. Crate sizes vary by a few inches, and orders with extra parts can ship taller and heavier.</p>
 <p>12' and 15' crates come off on the truck's liftgate. 18' and larger need a forklift. Crates over 20 feet (36'–42' roofs) are easiest with fork extensions or two forklifts, so contact us before delivery to plan it.</p>
@@ -329,8 +329,8 @@ FAQ = [
 ("How much does the roof weigh? Can my yurt take the weight?", "Our roofs weigh about 2 to 2.5 pounds per square foot. Most yurt roofs are rated for 20 to 40 pounds per square foot or more, so this matters only if your yurt's rating is close to your local snow load. When engineered into a structure, the roof is designed for a 22 psf overall load; it doesn't increase your yurt's load capacity. Roof stiffeners and metal rafters are available for round houses."),
 ("What are the roof panels made of?", "High-quality galvanized steel with a G-115 coating (minimum 350 g/m² of zinc). No other roofing uses a thicker zinc coating, and zinc is what keeps steel from corroding."),
 ("Do your roofs fit round buildings other than yurts?", "Yes. Our roofs have been used on strawbale, earthbag and wood-frame round houses. The roof can be engineered into the structure as a complete rafter and roof system, or set on standard rafters."),
-("How is my roof shipped?", "Freight to your address is included west of the Mississippi River; east of the Mississippi it costs $1,000 more. Some remote locations are excluded, and Hawaii, Alaska and Canada are quoted separately. Your roof arrives as one sturdy wooden crate on an LTL freight truck. You're responsible for unloading, and we're happy to help you plan it."),
-("What countries do you ship to?", "We work with international shippers to deliver to Canada, and with logistics companies that deliver to Hawaii and Alaska. Contact us for a shipping quote before ordering."),
+("How is my roof shipped?", "Freight to your address is included west of the Mississippi River; east of the Mississippi it costs $1,000 more. Some remote locations are excluded. Hawaii, Alaska and Canada pay the west price for delivery to your chosen logistics company in the lower 48, with final delivery at your expense. Your roof arrives as one sturdy wooden crate on an LTL freight truck. You're responsible for unloading, and we're happy to help you plan it."),
+("What countries do you ship to?", "The US and Canada. For Hawaii, Alaska and Canada we deliver to your chosen logistics company in the lower 48 at the west-of-the-Mississippi price, and final delivery from there is at your expense."),
 ("How big and heavy is the crate?", "From 6 feet and 850 lb for a 12' roof up to 23½ feet and 4,700 lb for a 42' roof. Weights include about 200 lb of margin. <a href=\"/roof#shipping\">See the crate table</a> for every size."),
 ("How do I unload the crate?", "12' and 15' crates can come off on the truck's liftgate. 18' and larger roofs need a forklift. Crates over 20 feet (36'–42' roofs) are easiest with fork extensions or two forklifts, so contact us before delivery. Follow our <a href=\"/unloading\">step-by-step unloading guide</a>."),
 ("How do I order and pay?", "Fill out the order form with your size, delivery location and options, then pay a 50% deposit by ACH bank debit or check. The balance is due about a week before your roof ships. <a href=\"/roof#order\">How to order</a>."),
