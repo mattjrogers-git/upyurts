@@ -357,7 +357,7 @@ PAGES["404.html"] = ("Page not found | UP Yurts", "Page not found.",
 """<div class="page-head"><div class="wrap"><h1>Page not found</h1><p>That page has moved. Try the <a href="/">home page</a> or <a href="/roof">sizes &amp; prices</a>.</p></div></div>""")
 
 if __name__ == "__main__":
-    root = pathlib.Path(__file__).parent
+    root = pathlib.Path(__file__).parent / "public"
     for slug, (t, d, b) in PAGES.items():
         (root / slug).write_text(page(slug, t, d, b))
     urls = [s for s in PAGES if s != "404.html"]

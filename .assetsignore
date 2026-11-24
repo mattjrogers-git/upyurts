@@ -1,9 +1,0 @@
-.git
-.gitignore
-.assetsignore
-wrangler.jsonc
-build.py
-terms.html.part
-README.md
-node_modules
-.wrangler
