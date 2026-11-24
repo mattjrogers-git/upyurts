@@ -75,12 +75,15 @@ CONTACT = f"""<section class="contact"><div class="wrap split">
 </div></section>"""
 
 
+EAST = 1000  # extra freight east of the Mississippi
+
+
 def size_table(prices=True, crate=False):
-    head = "<th>Roof diameter</th>" + ("<th class=num>Price</th>" if prices else "") + \
+    head = "<th>Roof diameter</th>" + ("<th class=num>West of the Mississippi</th><th class=num>East of the Mississippi</th>" if prices else "") + \
            ("<th>Crate L × W × H</th><th class=num>Approx. weight</th><th>Unload with</th>" if crate else "")
     rows = ""
     for s, p, c, w, u in SIZES:
-        rows += f"<tr><td>{s}</td>" + (f"<td class=num>${p:,}</td>" if prices else "") + \
+        rows += f"<tr><td>{s}</td>" + (f"<td class=num>${p:,}</td><td class=num>${p + EAST:,}</td>" if prices else "") + \
                 (f"<td>{c}</td><td class=num>{w:,} lb</td><td>{u}</td>" if crate else "") + "</tr>"
     return f'<div class="table-wrap"><table><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
 
@@ -88,7 +91,7 @@ def size_table(prices=True, crate=False):
 PAGES = {}
 
 PAGES["index.html"] = ("UP Yurts | Metal Yurt Roofs | Replacement Roofs for Yurts",
-"Galvanized steel replacement roofs for yurts and round houses. 11 sizes from 12' to 42', built for a 70-year life, shipped free in the lower 48.",
+"Galvanized steel replacement roofs for yurts and round houses. 11 sizes from 12' to 42', built for a 70-year life, with freight to your door included.",
 f"""<div class="hero">
 <video autoplay muted loop playsinline poster="/img/roof-finished.jpg"><source src="/media/roof-drone-1.mp4" type="video/mp4"></video>
 <div class="wrap">
@@ -221,30 +224,31 @@ PAGES["features.html"] = ("Metal Yurt Roof Features | UP Yurts",
 </div></section>""")
 
 PAGES["roof.html"] = ("Metal Yurt Roof Sizes & Prices | UP Yurts",
-"Prices for UP Yurts metal roofs from 12' ($3,999) to 42' ($29,999), with free freight shipping in the lower 48, crate sizes and how to order.",
+"Prices for UP Yurts metal roofs from 12' ($3,999) to 42' ($29,999). Freight is included west of the Mississippi; add $1,000 east of the Mississippi.",
 f"""<div class="page-head"><div class="wrap"><p class="kicker">Sizes &amp; prices</p><h1>Metal Yurt Roof</h1>
 <p>Our metal roofs fit 98% of yurts and round houses: any roof with a 30° pitch. Premium galvanized steel, built for a 70-year life, in 11 sizes from 12' to 42'.</p></div></div>
 
 <section><div class="wrap split">
 <div>
 <h2>Prices</h2>
+<p class="note"><b>Freight is included in every price.</b> Delivery east of the Mississippi River costs <b>$1,000 more</b> because freight there is higher, so both prices are shown.</p>
 {size_table()}
-<p>Free freight shipping to your address in the lower 48. Prices exclude sales tax, which applies where required, including roofs picked up in New York.</p>
+<p>Hawaii, Alaska and Canada: <a href="mailto:{EMAIL}">contact us</a> for a shipping quote before ordering. Prices exclude sales tax, which applies where required, including roofs picked up in New York.</p>
 </div>
 <div><div class="video-box"><video controls muted playsinline preload="none" poster="/img/roof-finished.jpg"><source src="/media/roof-drone-1.mp4" type="video/mp4"></video></div>
 <h3 style="margin-top:24px">Every roof includes</h3>
 <ul class="ticks"><li>24-gauge G-115 galvanized steel panels with pre-punched holes</li>
 <li>A 22-inch center opening on 12' and 15' roofs; a factory-finished 36-inch peak opening on 18' and larger</li>
-<li>Delivery in one wooden crate by LTL freight truck</li>
-<li>Our support through your install: missing parts and damaged items replaced</li></ul>
-<p>Optional: a 60-inch dome flashing kit, $150.</p></div>
+<li>Freight delivery in one wooden crate by LTL truck</li></ul>
+<h3>Option</h3>
+<ul class="ticks"><li>60-inch dome flashing kit: $150. Choose it on the order form.</li></ul></div>
 </div></section>
 
 <section class="alt" id="order"><div class="wrap">
 <h2>How to order</h2>
 <ol class="steps">
 <li><b>Measure your yurt.</b> Confirm a 30° roof pitch and your diameter. Not sure which size? <a href="mailto:{EMAIL}">Email us</a> and we'll confirm it with you.</li>
-<li><b>Fill out the order form</b> with your roof size, delivery address and payment choice.</li>
+<li><b>Fill out the order form.</b> Choose your roof size, delivery location (west or east of the Mississippi), the optional dome flashing kit, and how you'll pay. The form totals your order and deposit.</li>
 <li><b>Pay a 50% deposit</b> by ACH bank debit or check. Your roof goes into production once the deposit clears.</li>
 <li><b>Pay the balance</b> about one week before your roof ships. We email you the amount and date first.</li>
 </ol>
@@ -254,7 +258,7 @@ f"""<div class="page-head"><div class="wrap"><p class="kicker">Sizes &amp; price
 
 <section id="shipping"><div class="wrap">
 <h2>Shipping, crate sizes and unloading</h2>
-<p>Your roof arrives in one sturdy wooden crate on an LTL freight truck. Shipping is free to your address (some remote locations excluded; Hawaii and Alaska orders ship to a freight forwarder in the lower 48). You're responsible for unloading, and we're glad to help you plan it.</p>
+<p>Your roof arrives in one sturdy wooden crate on an LTL freight truck. Freight is included west of the Mississippi; east of the Mississippi it's $1,000 extra. Some remote locations are excluded, and Hawaii, Alaska and Canada are quoted separately. You're responsible for unloading, and we're glad to help you plan it.</p>
 {size_table(prices=False, crate=True)}
 <p>Weights include about 200 lb of margin, so plan your equipment for the weight shown. Crate sizes vary by a few inches, and orders with extra parts can ship taller and heavier.</p>
 <p>12' and 15' crates come off on the truck's liftgate. 18' and larger need a forklift. Crates over 20 feet (36'–42' roofs) are easiest with fork extensions or two forklifts, so contact us before delivery to plan it.</p>
@@ -263,7 +267,7 @@ f"""<div class="page-head"><div class="wrap"><p class="kicker">Sizes &amp; price
 
 <section class="alt"><div class="wrap">
 <h2>Returns</h2>
-<p>Because of their size and shipping, roofs can't be returned once opened. Every roof is made on high-tech CNC equipment, and we stand behind it: we'll make sure nothing is missing, replace any damaged items and help make your install smooth and secure.</p>
+<p>Roofs are made to order and can't be returned once opened. Inspect your crate when it arrives and note any freight damage on the delivery receipt before you sign, then tell us in writing within 5 business days so we can help with the carrier claim. See the <a href="/terms">Terms of Sale</a> for warranty and claim details.</p>
 </div></section>""")
 
 PAGES["unloading.html"] = ("Unloading Your Roof Crate | UP Yurts",
@@ -325,11 +329,11 @@ FAQ = [
 ("How much does the roof weigh? Can my yurt take the weight?", "Our roofs weigh about 2 to 2.5 pounds per square foot. Most yurt roofs are rated for 20 to 40 pounds per square foot or more, so this matters only if your yurt's rating is close to your local snow load. When engineered into a structure, the roof is designed for a 22 psf overall load; it doesn't increase your yurt's load capacity. Roof stiffeners and metal rafters are available for round houses."),
 ("What are the roof panels made of?", "High-quality galvanized steel with a G-115 coating (minimum 350 g/m² of zinc). No other roofing uses a thicker zinc coating, and zinc is what keeps steel from corroding."),
 ("Do your roofs fit round buildings other than yurts?", "Yes. Our roofs have been used on strawbale, earthbag and wood-frame round houses. The roof can be engineered into the structure as a complete rafter and roof system, or set on standard rafters."),
-("How is my roof shipped?", "Shipping is free to your address (some remote locations are excluded; Hawaii and Alaska orders go to a freight forwarder in the lower 48). Your roof arrives as one sturdy wooden crate on an LTL freight truck. You're responsible for unloading, and we're happy to help you plan it."),
-("What countries do you ship to?", "We work with international shippers to deliver to Canada, and with logistics companies that deliver to Hawaii and Alaska."),
+("How is my roof shipped?", "Freight to your address is included west of the Mississippi River; east of the Mississippi it costs $1,000 more. Some remote locations are excluded, and Hawaii, Alaska and Canada are quoted separately. Your roof arrives as one sturdy wooden crate on an LTL freight truck. You're responsible for unloading, and we're happy to help you plan it."),
+("What countries do you ship to?", "We work with international shippers to deliver to Canada, and with logistics companies that deliver to Hawaii and Alaska. Contact us for a shipping quote before ordering."),
 ("How big and heavy is the crate?", "From 6 feet and 850 lb for a 12' roof up to 23½ feet and 4,700 lb for a 42' roof. Weights include about 200 lb of margin. <a href=\"/roof#shipping\">See the crate table</a> for every size."),
 ("How do I unload the crate?", "12' and 15' crates can come off on the truck's liftgate. 18' and larger roofs need a forklift. Crates over 20 feet (36'–42' roofs) are easiest with fork extensions or two forklifts, so contact us before delivery. Follow our <a href=\"/unloading\">step-by-step unloading guide</a>."),
-("How do I order and pay?", "Fill out the order form with your size and delivery address, then pay a 50% deposit by ACH bank debit or check. The balance is due about a week before your roof ships. <a href=\"/roof#order\">How to order</a>."),
+("How do I order and pay?", "Fill out the order form with your size, delivery location and options, then pay a 50% deposit by ACH bank debit or check. The balance is due about a week before your roof ships. <a href=\"/roof#order\">How to order</a>."),
 ]
 PAGES["faq.html"] = ("FAQ | Metal Yurt Roofs | UP Yurts",
 "Answers about UP Yurts metal roofs: sizes, fit, domes, install time, weight, materials, shipping, crate sizes, unloading and ordering.",
