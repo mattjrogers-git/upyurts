@@ -5,7 +5,7 @@ import pathlib, datetime
 
 SITE = "https://upyurts.info"
 ORDER_URL = "https://form.jotform.com/261616096843059"  # TODO: order form (see README)
-PHONE, PHONE_TEL, EMAIL = "845-384-2994", "+18453842994", "info@upyurts.info"
+PHONE, PHONE_TEL, EMAIL = "845-384-2994", "+18453842994", "matt@upyurts.info"
 YEAR = datetime.date.today().year
 
 NAV = [("index.html", "Home"), ("metal-yurt-roofs.html", "Why Metal"), ("features.html", "Features"),
